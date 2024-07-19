@@ -2,6 +2,7 @@ import random
 
 x = random.sample(range(1, 100), 10)
 
+#氣泡排序
 print(x)
 
 for num in range(len(x)):
