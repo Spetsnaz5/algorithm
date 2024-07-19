@@ -10,8 +10,8 @@ for num in range(len(x)):
         if index+1 >= len(x):
             break
         if x[index] > x[index+1]:
-            temp = x[index + 1]
-            x[index + 1] = x[index]
-            x[index] = temp
+            tmp = x[index+1]
+            x[index+1] = x[index]
+            x[index] = tmp
 
 print(x)
