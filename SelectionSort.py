@@ -1,21 +1,18 @@
 import random
 
-#選擇排序
-x = random.sample(range(1, 100), 10)
+nums = random.sample(range(1, 100), 9)
 
-print(x)
+print(nums)
 
-for j in range(len(x)):
-    min = j
-    for i in range(len(x) - j):
-        if i+j >= len(x):
-            break
-        if x[i+j] < x[min]:
-            min = i+j
-            
-    tmp = x[j]
-    x[j] = x[min]
-    x[min] = tmp
+for i in range(8, 0, -1):
+    max = 0
+    for j in range(1, i+1):
+        if nums[j] > nums[max]:
+            max = j
+    nums[i], nums[max] = nums[max], nums[i]
+    print("選擇排序的執行結果：", 9-i, "次")
     
-print(x)
-            
+    for item in nums:
+        print(item, ' ', end="")
+        
+    print()
